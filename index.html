@@ -410,7 +410,7 @@ f &lt;- as.formula(paste(&quot;price ~&quot;, paste(n[!n %in% &quot;price&quot;]
 nn &lt;- neuralnet(f,data=train_,hidden=c(5,3),linear.output=T)
 
 plot(nn)
-
+<img src="Rplot01.png" alt="Rplot01">
 pr.nn &lt;- compute(nn,test_[,1:2])
 
 pr.nn_ &lt;- pr.nn$net.result*(max(data$price)-min(data$price))+min(data$price)
@@ -429,7 +429,7 @@ legend(&#39;bottomright&#39;,legend=&#39;NN&#39;,pch=18,col=&#39;red&#39;, bty=&
 plot(test$price,pr.lm,col=&#39;blue&#39;,main=&#39;Real vs predicted lm&#39;,pch=18, cex=0.7)
 abline(0,1,lwd=2)
 legend(&#39;bottomright&#39;,legend=&#39;LM&#39;,pch=18,col=&#39;blue&#39;, bty=&#39;n&#39;, cex=.95)
-
+<img src="Rplot02.png" alt="Rplot02">
 plot(test$price,pr.nn_,col=&#39;red&#39;,main=&#39;Real vs predicted NN&#39;,pch=18,cex=0.7)
 points(test$price,pr.lm,col=&#39;blue&#39;,pch=18,cex=0.7)
 abline(0,1,lwd=2)
@@ -498,7 +498,7 @@ pbar$init(k)</code></pre>
 
 
 
-
+<img src="Rplot03.png" alt="Rplot03">
 </div>
 
 <script>
